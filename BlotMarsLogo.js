@@ -159,3 +159,21 @@ bt.translate(finalLines, [88, height / 2], bt.bounds(finalLines).cc)
 // draw the second four numeral
 drawLines(finalLines);
 finalLines.pop();
+
+// create the Mars Planet outline
+const MarsPlanet = bt.nurbs(
+  [
+    [width / 2, 5],
+    [5, height / 2],
+    [width / 2, 120],
+    [120, height / 2],
+    [width / 2, 5]
+  ],
+  { steps: 100, degree: 3 });
+
+// add the Mars Planet outline to the final lines
+finalLines.push(MarsPlanet);
+
+// draw the Mars Planet outline
+drawLines(finalLines)
+finalLines.pop();
