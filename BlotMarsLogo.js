@@ -293,3 +293,23 @@ bt.translate(finalLines, [53, 96.5], bt.bounds(finalLines).cc)
 // draw the letter "M"
 drawLines(finalLines);
 finalLines.pop();
+
+// create the letter "A"
+const letterA = [
+  [50, 90],
+  [51, 92],
+  [52, 90],
+  [51.5, 91],
+  [50.5, 91]
+];
+
+// add the letter "A" to the final lines
+finalLines.push(letterA);
+
+// transform the letter "A"
+bt.scale(finalLines, 1.7)
+bt.translate(finalLines, [59.5, 96.5], bt.bounds(finalLines).cc)
+
+// draw the letter "A"
+drawLines(finalLines);
+finalLines.pop();
