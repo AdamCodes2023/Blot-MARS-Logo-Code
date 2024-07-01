@@ -273,3 +273,23 @@ bt.translate(finalLines, [bt.randIntInRange(65, 78), bt.randIntInRange(37, 44)],
 // draw the Mars Crater outline
 drawLines(finalLines)
 finalLines.pop();
+
+// create the letter "M"
+const letterM = [
+  [50, 90],
+  [51, 92],
+  [52, 90],
+  [53, 92],
+  [54, 90]
+];
+
+// add the letter "M" to the final lines
+finalLines.push(letterM);
+
+// transform the letter "M"
+bt.scale(finalLines, 1.6)
+bt.translate(finalLines, [53, 96.5], bt.bounds(finalLines).cc)
+
+// draw the letter "M"
+drawLines(finalLines);
+finalLines.pop();
