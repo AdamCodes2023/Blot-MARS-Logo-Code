@@ -85,3 +85,51 @@ bt.translate(finalLines, [53.333, height / 2], bt.bounds(finalLines).cc)
 // draw the inner part of the first zero numeral
 drawLines(finalLines)
 finalLines.pop();
+
+// create the second zero numeral
+const secondZero = bt.catmullRom([
+  [55, 60],
+  [48, 62],
+  [45, 75],
+  [48, 88],
+  [55, 90],
+  [62, 88],
+  [65, 75],
+  [62, 62],
+  [55, 60]
+]);
+
+// add the second zero numeral to the final lines
+finalLines.push(secondZero);
+
+// transform the second zero numeral
+bt.scale(finalLines, 0.75)
+bt.translate(finalLines, [71.666, height / 2], bt.bounds(finalLines).cc)
+
+// draw the second zero numeral
+drawLines(finalLines)
+finalLines.pop();
+
+// create the inner part of the second zero numeral
+const secondZeroInner = bt.catmullRom([
+  [55, 60],
+  [48, 62],
+  [45, 75],
+  [48, 88],
+  [55, 90],
+  [62, 88],
+  [65, 75],
+  [62, 62],
+  [55, 60]
+]);
+
+// add the inner part of the second zero numeral to the final lines
+finalLines.push(secondZeroInner);
+
+// transform the inner part of the second zero numeral
+bt.scale(finalLines, 0.35)
+bt.translate(finalLines, [71.666, height / 2], bt.bounds(finalLines).cc)
+
+// draw the inner part of the second zero numeral
+drawLines(finalLines)
+finalLines.pop();
