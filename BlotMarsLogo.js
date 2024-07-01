@@ -37,3 +37,51 @@ bt.translate(finalLines, [37, height / 2], bt.bounds(finalLines).cc)
 // draw the first four numeral
 drawLines(finalLines);
 finalLines.pop();
+
+// create the first zero numeral
+const firstZero = bt.catmullRom([
+  [55, 60],
+  [48, 62],
+  [45, 75],
+  [48, 88],
+  [55, 90],
+  [62, 88],
+  [65, 75],
+  [62, 62],
+  [55, 60]
+]);
+
+// add the first zero numeral to the final lines
+finalLines.push(firstZero);
+
+// transform the first zero numeral
+bt.scale(finalLines, 0.75)
+bt.translate(finalLines, [53.333, height / 2], bt.bounds(finalLines).cc)
+
+// draw the first zero numeral
+drawLines(finalLines)
+finalLines.pop();
+
+// create the inner part of the first zero numeral
+const firstZeroInner = bt.catmullRom([
+  [55, 60],
+  [48, 62],
+  [45, 75],
+  [48, 88],
+  [55, 90],
+  [62, 88],
+  [65, 75],
+  [62, 62],
+  [55, 60]
+]);
+
+// add the inner part of the first zero numeral to the final lines
+finalLines.push(firstZeroInner);
+
+// transform the inner part of the first zero numeral
+bt.scale(finalLines, 0.35)
+bt.translate(finalLines, [53.333, height / 2], bt.bounds(finalLines).cc)
+
+// draw the inner part of the first zero numeral
+drawLines(finalLines)
+finalLines.pop();
