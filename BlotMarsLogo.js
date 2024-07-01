@@ -177,3 +177,27 @@ finalLines.push(MarsPlanet);
 // draw the Mars Planet outline
 drawLines(finalLines)
 finalLines.pop();
+
+// create the First Mars Crater outline
+const UpperMarsCrater1 = bt.nurbs(
+  [
+    [width / 2, 5],
+    [5, height / 2],
+    [width / 2, 120],
+    [120, height / 2],
+    [width / 2, 5]
+  ],
+  { steps: 100, degree: 3 });
+
+// add the Mars Crater outline to the final lines
+finalLines.push(UpperMarsCrater1);
+
+// transform the Mars Crater outline
+bt.scale(finalLines, 0.15)
+
+// draw random craters in the Mars Planet outline
+bt.translate(finalLines, [bt.randIntInRange(45, 54), bt.randIntInRange(81, 88)], bt.bounds(finalLines).cc)
+
+// draw the Mars Crater outline
+drawLines(finalLines)
+finalLines.pop();
