@@ -133,3 +133,29 @@ bt.translate(finalLines, [71.666, height / 2], bt.bounds(finalLines).cc)
 // draw the inner part of the second zero numeral
 drawLines(finalLines)
 finalLines.pop();
+
+// create the second four numeral
+const secondFour = [
+  [30, 90],
+  [35, 90],
+  [35, 75],
+  [40, 75],
+  [40, 90],
+  [45, 90],
+  [45, 60],
+  [40, 60],
+  [40, 68],
+  [30, 68],
+  [30, 90]
+];
+
+// add the second four numeral to the final lines
+finalLines.push(secondFour);
+
+// transform the second four numeral
+bt.scale(finalLines, 0.75)
+bt.translate(finalLines, [88, height / 2], bt.bounds(finalLines).cc)
+
+// draw the second four numeral
+drawLines(finalLines);
+finalLines.pop();
