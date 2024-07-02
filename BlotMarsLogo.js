@@ -375,3 +375,23 @@ bt.translate(finalLines, [53.5, 29], bt.bounds(finalLines).cc)
 // draw the letter "M"
 drawLines(finalLines);
 finalLines.pop();
+
+// create the letter "A" in the lower part of the planet
+const letterALower = [
+  [50, 90],
+  [51, 92],
+  [52, 90],
+  [51.5, 91],
+  [50.5, 91]
+];
+
+// add the letter "A" to the final lines
+finalLines.push(letterALower);
+
+// transform the letter "A"
+bt.scale(finalLines, 1.7)
+bt.translate(finalLines, [60, 29], bt.bounds(finalLines).cc)
+
+// draw the letter "A"
+drawLines(finalLines);
+finalLines.pop();
