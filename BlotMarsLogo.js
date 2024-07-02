@@ -611,3 +611,25 @@ bt.translate(finalLines, [113, 52.5], bt.bounds(finalLines).cc)
 // draw the right meteor rock
 drawLines(finalLines)
 finalLines.pop();
+
+// create the right meteor flame outline
+const RightMeteorFlames = [
+  [24.5, height / 2],
+  [24.5, 165],
+  [43.75, bt.randIntInRange(126, 149)],
+  [63.00, 165],
+  [82.25, bt.randIntInRange(126, 149)],
+  [101.5, 165],
+  [101.5, height / 2]
+];
+
+// add the right meteor flames to the final lines
+finalLines.push(RightMeteorFlames);
+
+// transform the right meteor flames
+bt.scale(finalLines, 0.25)
+bt.translate(finalLines, [113, 65.5], bt.bounds(finalLines).cc)
+
+// draw the right meteor flames
+drawLines(finalLines)
+finalLines.pop();
