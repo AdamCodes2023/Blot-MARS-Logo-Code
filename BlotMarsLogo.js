@@ -464,3 +464,30 @@ bt.rotate(finalLines, bt.randIntInRange(-40, 40));
 // draw the first star
 drawLines(finalLines);
 finalLines.pop();
+
+// create the second star
+const upRightStar = [
+  [50, 52],
+  [48, 49],
+  [45, 49],
+  [47, 46],
+  [46, 43],
+  [50, 45],
+  [54, 43],
+  [53, 46],
+  [55, 49],
+  [52, 49],
+  [50, 52]
+];
+
+// add the second star to the final lines
+finalLines.push(upRightStar);
+
+// transform the second star
+bt.scale(finalLines, 2.5)
+bt.translate(finalLines, [105, 105], bt.bounds(finalLines).cc)
+bt.rotate(finalLines, bt.randIntInRange(-40, 40));
+
+// draw the second star
+drawLines(finalLines);
+finalLines.pop();
