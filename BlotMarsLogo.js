@@ -437,3 +437,30 @@ bt.translate(finalLines, [70, 29], bt.bounds(finalLines).cc)
 // draw the letter "S"
 drawLines(finalLines);
 finalLines.pop();
+
+// create the first star
+const upLeftStar = [
+  [50, 52],
+  [48, 49],
+  [45, 49],
+  [47, 46],
+  [46, 43],
+  [50, 45],
+  [54, 43],
+  [53, 46],
+  [55, 49],
+  [52, 49],
+  [50, 52]
+];
+
+// add the first star to the final lines
+finalLines.push(upLeftStar);
+
+// transform the first star
+bt.scale(finalLines, 2.5)
+bt.translate(finalLines, [20, 105], bt.bounds(finalLines).cc)
+bt.rotate(finalLines, bt.randIntInRange(-40, 40));
+
+// draw the first star
+drawLines(finalLines);
+finalLines.pop();
