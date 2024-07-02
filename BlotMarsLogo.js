@@ -416,3 +416,24 @@ bt.translate(finalLines, [64.75, 29], bt.bounds(finalLines).cc)
 // draw the letter "R"
 drawLines(finalLines);
 finalLines.pop();
+
+// create the letter "S" in the lower part of the planet
+const letterSLower = [
+  [52, 92],
+  [50, 92],
+  [50, 91],
+  [52, 91],
+  [52, 90],
+  [50, 90]
+];
+
+// add the letter "S" to the final lines
+finalLines.push(letterSLower);
+
+// transform the letter "S"
+bt.scale(finalLines, 1.5)
+bt.translate(finalLines, [70, 29], bt.bounds(finalLines).cc)
+
+// draw the letter "S"
+drawLines(finalLines);
+finalLines.pop();
