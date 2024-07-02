@@ -545,3 +545,25 @@ bt.rotate(finalLines, bt.randIntInRange(-40, 40));
 // draw the fourth star
 drawLines(finalLines);
 finalLines.pop();
+
+// create the left meteor rock outline
+const LeftMeteorRock = bt.nurbs(
+  [
+    [width / 2, 5],
+    [5, height / 2],
+    [width / 2, 120],
+    [120, height / 2],
+    [width / 2, 5]
+  ],
+  { steps: 100, degree: 3 });
+
+// add the left meteor rock to the final lines
+finalLines.push(LeftMeteorRock);
+
+// transform the left meteor rock
+bt.scale(finalLines, 0.25)
+bt.translate(finalLines, [12, 52.5], bt.bounds(finalLines).cc)
+
+// draw the left meteor rock
+drawLines(finalLines)
+finalLines.pop();
