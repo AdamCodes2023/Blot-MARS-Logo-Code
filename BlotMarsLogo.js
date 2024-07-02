@@ -313,3 +313,24 @@ bt.translate(finalLines, [59.5, 96.5], bt.bounds(finalLines).cc)
 // draw the letter "A"
 drawLines(finalLines);
 finalLines.pop();
+
+// create the letter "R"
+const letterR = [
+  [50, 90],
+  [50, 92],
+  [51, 92],
+  [51, 91],
+  [50, 91],
+  [51, 90]
+];
+
+// add the letter "R" to the final lines
+finalLines.push(letterR);
+
+// transform the letter "R"
+bt.scale(finalLines, 1.7)
+bt.translate(finalLines, [64.5, 96.5], bt.bounds(finalLines).cc)
+
+// draw the letter "R"
+drawLines(finalLines);
+finalLines.pop();
