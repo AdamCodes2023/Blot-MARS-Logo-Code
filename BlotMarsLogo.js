@@ -3,6 +3,21 @@
 // check out this guide to learn how to program in blot
 // https://blot.hackclub.com/editor?guide=start
 
+/*
+@title: FRC Team 4004 M.A.R.S. Logo
+@author: Adam Miller
+@snapshot: Snapshot1.png
+*/
+
+/*
+M.A.R.S. stands for Muskegon Area Robotics Students.
+We are a high school robotics team in West Michigan. We
+participate in the FIRST Robotics Competition, a program
+that tasks us with building a robot to compete in
+cooperative games with other teams. This Blot Art Program
+depicts our team logo.
+*/
+
 //Define Document Dimensions
 const width = 125;
 const height = 125;
@@ -37,6 +52,7 @@ bt.translate(finalLines, [37, height / 2], bt.bounds(finalLines).cc)
 // draw the first four numeral
 drawLines(finalLines);
 finalLines.pop();
+
 
 // create the first zero numeral
 const firstZero = bt.catmullRom([
@@ -86,6 +102,7 @@ bt.translate(finalLines, [53.333, height / 2], bt.bounds(finalLines).cc)
 drawLines(finalLines)
 finalLines.pop();
 
+
 // create the second zero numeral
 const secondZero = bt.catmullRom([
   [55, 60],
@@ -134,6 +151,7 @@ bt.translate(finalLines, [71.666, height / 2], bt.bounds(finalLines).cc)
 drawLines(finalLines)
 finalLines.pop();
 
+
 // create the second four numeral
 const secondFour = [
   [30, 90],
@@ -160,6 +178,7 @@ bt.translate(finalLines, [88, height / 2], bt.bounds(finalLines).cc)
 drawLines(finalLines);
 finalLines.pop();
 
+
 // create the Mars Planet outline
 const MarsPlanet = bt.nurbs(
   [
@@ -177,6 +196,7 @@ finalLines.push(MarsPlanet);
 // draw the Mars Planet outline
 drawLines(finalLines)
 finalLines.pop();
+
 
 // create the First Mars Crater outline
 const UpperMarsCrater1 = bt.nurbs(
@@ -202,6 +222,7 @@ bt.translate(finalLines, [bt.randIntInRange(45, 54), bt.randIntInRange(81, 88)],
 drawLines(finalLines)
 finalLines.pop();
 
+
 // create the Second Mars Crater outline
 const UpperMarsCrater2 = bt.nurbs(
   [
@@ -225,6 +246,7 @@ bt.translate(finalLines, [bt.randIntInRange(65, 78), bt.randIntInRange(81, 88)],
 // draw the Mars Crater outline
 drawLines(finalLines)
 finalLines.pop();
+
 
 // create the Third Mars Crater outline
 const LowerMarsCrater1 = bt.nurbs(
@@ -250,6 +272,7 @@ bt.translate(finalLines, [bt.randIntInRange(45, 54), bt.randIntInRange(36, 43)],
 drawLines(finalLines)
 finalLines.pop();
 
+
 // create the Fourth Mars Crater outline
 const LowerMarsCrater2 = bt.nurbs(
   [
@@ -274,6 +297,7 @@ bt.translate(finalLines, [bt.randIntInRange(65, 78), bt.randIntInRange(37, 44)],
 drawLines(finalLines)
 finalLines.pop();
 
+
 // create the letter "M"
 const letterM = [
   [50, 90],
@@ -294,6 +318,7 @@ bt.translate(finalLines, [53, 96.5], bt.bounds(finalLines).cc)
 drawLines(finalLines);
 finalLines.pop();
 
+
 // create the letter "A"
 const letterA = [
   [50, 90],
@@ -313,6 +338,7 @@ bt.translate(finalLines, [59.5, 96.5], bt.bounds(finalLines).cc)
 // draw the letter "A"
 drawLines(finalLines);
 finalLines.pop();
+
 
 // create the letter "R"
 const letterR = [
@@ -335,6 +361,7 @@ bt.translate(finalLines, [64.5, 96.5], bt.bounds(finalLines).cc)
 drawLines(finalLines);
 finalLines.pop();
 
+
 // create the letter "S"
 const letterS = [
   [52, 92],
@@ -356,6 +383,7 @@ bt.translate(finalLines, [70, 96.5], bt.bounds(finalLines).cc)
 drawLines(finalLines);
 finalLines.pop();
 
+
 // create the letter "M" in the lower part of the planet
 const letterMLower = [
   [50, 90],
@@ -376,6 +404,7 @@ bt.translate(finalLines, [53.5, 29], bt.bounds(finalLines).cc)
 drawLines(finalLines);
 finalLines.pop();
 
+
 // create the letter "A" in the lower part of the planet
 const letterALower = [
   [50, 90],
@@ -395,6 +424,7 @@ bt.translate(finalLines, [60, 29], bt.bounds(finalLines).cc)
 // draw the letter "A"
 drawLines(finalLines);
 finalLines.pop();
+
 
 // create the letter "R" in the lower part of the planet
 const letterRLower = [
@@ -417,6 +447,7 @@ bt.translate(finalLines, [64.75, 29], bt.bounds(finalLines).cc)
 drawLines(finalLines);
 finalLines.pop();
 
+
 // create the letter "S" in the lower part of the planet
 const letterSLower = [
   [52, 92],
@@ -437,6 +468,7 @@ bt.translate(finalLines, [70, 29], bt.bounds(finalLines).cc)
 // draw the letter "S"
 drawLines(finalLines);
 finalLines.pop();
+
 
 // create the first star
 const upLeftStar = [
@@ -465,6 +497,7 @@ bt.rotate(finalLines, bt.randIntInRange(-40, 40));
 drawLines(finalLines);
 finalLines.pop();
 
+
 // create the second star
 const upRightStar = [
   [50, 52],
@@ -491,6 +524,7 @@ bt.rotate(finalLines, bt.randIntInRange(-40, 40));
 // draw the second star
 drawLines(finalLines);
 finalLines.pop();
+
 
 // create the third star
 const downLeftStar = [
@@ -519,6 +553,7 @@ bt.rotate(finalLines, bt.randIntInRange(-40, 40));
 drawLines(finalLines);
 finalLines.pop();
 
+
 // create the fourth star
 const downRightStar = [
   [50, 52],
@@ -546,6 +581,7 @@ bt.rotate(finalLines, bt.randIntInRange(-40, 40));
 drawLines(finalLines);
 finalLines.pop();
 
+
 // create the left meteor rock outline
 const LeftMeteorRock = bt.nurbs(
   [
@@ -567,6 +603,7 @@ bt.translate(finalLines, [12, 52.5], bt.bounds(finalLines).cc)
 // draw the left meteor rock
 drawLines(finalLines)
 finalLines.pop();
+
 
 // create the left meteor flame outline
 const LeftMeteorFlames = [
@@ -590,6 +627,7 @@ bt.translate(finalLines, [12, 65.5], bt.bounds(finalLines).cc)
 drawLines(finalLines)
 finalLines.pop();
 
+
 // create the right meteor rock outline
 const RightMeteorRock = bt.nurbs(
   [
@@ -612,6 +650,7 @@ bt.translate(finalLines, [113, 52.5], bt.bounds(finalLines).cc)
 drawLines(finalLines)
 finalLines.pop();
 
+
 // create the right meteor flame outline
 const RightMeteorFlames = [
   [24.5, height / 2],
@@ -633,3 +672,26 @@ bt.translate(finalLines, [113, 65.5], bt.bounds(finalLines).cc)
 // draw the right meteor flames
 drawLines(finalLines)
 finalLines.pop();
+
+
+/*
+// create an outline of the document boundaries
+const docBounds = [
+  [0, 0],
+  [0, height],
+  [width, height],
+  [width, 0],
+  [0, 0]
+];
+
+// add the outline of the document boundaries to the final lines
+finalLines.push(docBounds);
+
+// transform the outline of the document boundaries
+//bt.scale(finalLines, 1.5)
+//bt.translate(finalLines, [70, 29], bt.bounds(finalLines).cc)
+
+// draw the outline of the document boundaries
+drawLines(finalLines);
+finalLines.pop();
+*/
